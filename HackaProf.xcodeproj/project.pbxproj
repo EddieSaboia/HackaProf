@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CFB1255C22A046CE004FF716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1255B22A046CE004FF716 /* AppDelegate.swift */; };
+		CFB1255E22A046CE004FF716 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1255D22A046CE004FF716 /* ViewController.swift */; };
+		CFB1256122A046CE004FF716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB1255F22A046CE004FF716 /* Main.storyboard */; };
+		CFB1256322A046D0004FF716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB1256222A046D0004FF716 /* Assets.xcassets */; };
+		CFB1256622A046D0004FF716 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB1256422A046D0004FF716 /* LaunchScreen.storyboard */; };
+		CFB1256E22A04B31004FF716 /* ESDisciplinaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1256D22A04B31004FF716 /* ESDisciplinaTableViewController.swift */; };
+		CFB1257022A04C2B004FF716 /* ESProfessorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1256F22A04C2B004FF716 /* ESProfessorTableViewController.swift */; };
+		CFB1257222A04C57004FF716 /* ESProfessorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1257122A04C57004FF716 /* ESProfessorTableViewCell.swift */; };
+		CFB1257522A04C9A004FF716 /* Disciplina.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1257422A04C9A004FF716 /* Disciplina.swift */; };
+		CFB1257722A04CA7004FF716 /* DisciplinaDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1257622A04CA7004FF716 /* DisciplinaDAO.swift */; };
+		CFB1257922A04CB2004FF716 /* Professor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1257822A04CB2004FF716 /* Professor.swift */; };
+		CFB1257B22A04CBE004FF716 /* ProfessorDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1257A22A04CBE004FF716 /* ProfessorDAO.swift */; };
+		CFB1257D22A04CC8004FF716 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1257C22A04CC8004FF716 /* Usuario.swift */; };
+		CFB1257F22A04D42004FF716 /* UsuarioDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1257E22A04D42004FF716 /* UsuarioDAO.swift */; };
+		CFB1258122A05BD2004FF716 /* Aula.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1258022A05BD2004FF716 /* Aula.swift */; };
+		CFB1258322A05ECF004FF716 /* AulaDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1258222A05ECF004FF716 /* AulaDAO.swift */; };
+		CFB1258522A066F4004FF716 /* ESDisciplinaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1258422A066F4004FF716 /* ESDisciplinaTableViewCell.swift */; };
+		CFB1258722A06B18004FF716 /* ESAulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1258622A06B18004FF716 /* ESAulaViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CFB1255822A046CE004FF716 /* HackaProf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackaProf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB1255B22A046CE004FF716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFB1255D22A046CE004FF716 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CFB1256022A046CE004FF716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CFB1256222A046D0004FF716 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFB1256522A046D0004FF716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFB1256722A046D0004FF716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFB1256D22A04B31004FF716 /* ESDisciplinaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESDisciplinaTableViewController.swift; sourceTree = "<group>"; };
+		CFB1256F22A04C2B004FF716 /* ESProfessorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESProfessorTableViewController.swift; sourceTree = "<group>"; };
+		CFB1257122A04C57004FF716 /* ESProfessorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESProfessorTableViewCell.swift; sourceTree = "<group>"; };
+		CFB1257422A04C9A004FF716 /* Disciplina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disciplina.swift; sourceTree = "<group>"; };
+		CFB1257622A04CA7004FF716 /* DisciplinaDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisciplinaDAO.swift; sourceTree = "<group>"; };
+		CFB1257822A04CB2004FF716 /* Professor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Professor.swift; sourceTree = "<group>"; };
+		CFB1257A22A04CBE004FF716 /* ProfessorDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorDAO.swift; sourceTree = "<group>"; };
+		CFB1257C22A04CC8004FF716 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		CFB1257E22A04D42004FF716 /* UsuarioDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioDAO.swift; sourceTree = "<group>"; };
+		CFB1258022A05BD2004FF716 /* Aula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aula.swift; sourceTree = "<group>"; };
+		CFB1258222A05ECF004FF716 /* AulaDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AulaDAO.swift; sourceTree = "<group>"; };
+		CFB1258422A066F4004FF716 /* ESDisciplinaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESDisciplinaTableViewCell.swift; sourceTree = "<group>"; };
+		CFB1258622A06B18004FF716 /* ESAulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESAulaViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFB1255522A046CE004FF716 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CFB1254F22A046CD004FF716 = {
+			isa = PBXGroup;
+			children = (
+				CFB1255A22A046CE004FF716 /* HackaProf */,
+				CFB1255922A046CE004FF716 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CFB1255922A046CE004FF716 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFB1255822A046CE004FF716 /* HackaProf.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFB1255A22A046CE004FF716 /* HackaProf */ = {
+			isa = PBXGroup;
+			children = (
+				CFB1257322A04C89004FF716 /* Objects */,
+				CFB1255B22A046CE004FF716 /* AppDelegate.swift */,
+				CFB1255D22A046CE004FF716 /* ViewController.swift */,
+				CFB1255F22A046CE004FF716 /* Main.storyboard */,
+				CFB1256222A046D0004FF716 /* Assets.xcassets */,
+				CFB1256422A046D0004FF716 /* LaunchScreen.storyboard */,
+				CFB1256722A046D0004FF716 /* Info.plist */,
+				CFB1256D22A04B31004FF716 /* ESDisciplinaTableViewController.swift */,
+				CFB1258422A066F4004FF716 /* ESDisciplinaTableViewCell.swift */,
+				CFB1256F22A04C2B004FF716 /* ESProfessorTableViewController.swift */,
+				CFB1257122A04C57004FF716 /* ESProfessorTableViewCell.swift */,
+				CFB1258622A06B18004FF716 /* ESAulaViewController.swift */,
+			);
+			path = HackaProf;
+			sourceTree = "<group>";
+		};
+		CFB1257322A04C89004FF716 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				CFB1257422A04C9A004FF716 /* Disciplina.swift */,
+				CFB1257622A04CA7004FF716 /* DisciplinaDAO.swift */,
+				CFB1257822A04CB2004FF716 /* Professor.swift */,
+				CFB1257A22A04CBE004FF716 /* ProfessorDAO.swift */,
+				CFB1257C22A04CC8004FF716 /* Usuario.swift */,
+				CFB1257E22A04D42004FF716 /* UsuarioDAO.swift */,
+				CFB1258022A05BD2004FF716 /* Aula.swift */,
+				CFB1258222A05ECF004FF716 /* AulaDAO.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFB1255722A046CE004FF716 /* HackaProf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFB1256A22A046D0004FF716 /* Build configuration list for PBXNativeTarget "HackaProf" */;
+			buildPhases = (
+				CFB1255422A046CE004FF716 /* Sources */,
+				CFB1255522A046CE004FF716 /* Frameworks */,
+				CFB1255622A046CE004FF716 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HackaProf;
+			productName = HackaProf;
+			productReference = CFB1255822A046CE004FF716 /* HackaProf.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFB1255022A046CD004FF716 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Eddie Saboia";
+				TargetAttributes = {
+					CFB1255722A046CE004FF716 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = CFB1255322A046CD004FF716 /* Build configuration list for PBXProject "HackaProf" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CFB1254F22A046CD004FF716;
+			productRefGroup = CFB1255922A046CE004FF716 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFB1255722A046CE004FF716 /* HackaProf */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFB1255622A046CE004FF716 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFB1256622A046D0004FF716 /* LaunchScreen.storyboard in Resources */,
+				CFB1256322A046D0004FF716 /* Assets.xcassets in Resources */,
+				CFB1256122A046CE004FF716 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFB1255422A046CE004FF716 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFB1257722A04CA7004FF716 /* DisciplinaDAO.swift in Sources */,
+				CFB1256E22A04B31004FF716 /* ESDisciplinaTableViewController.swift in Sources */,
+				CFB1258322A05ECF004FF716 /* AulaDAO.swift in Sources */,
+				CFB1257F22A04D42004FF716 /* UsuarioDAO.swift in Sources */,
+				CFB1255E22A046CE004FF716 /* ViewController.swift in Sources */,
+				CFB1257222A04C57004FF716 /* ESProfessorTableViewCell.swift in Sources */,
+				CFB1257022A04C2B004FF716 /* ESProfessorTableViewController.swift in Sources */,
+				CFB1257922A04CB2004FF716 /* Professor.swift in Sources */,
+				CFB1255C22A046CE004FF716 /* AppDelegate.swift in Sources */,
+				CFB1258522A066F4004FF716 /* ESDisciplinaTableViewCell.swift in Sources */,
+				CFB1258722A06B18004FF716 /* ESAulaViewController.swift in Sources */,
+				CFB1258122A05BD2004FF716 /* Aula.swift in Sources */,
+				CFB1257B22A04CBE004FF716 /* ProfessorDAO.swift in Sources */,
+				CFB1257D22A04CC8004FF716 /* Usuario.swift in Sources */,
+				CFB1257522A04C9A004FF716 /* Disciplina.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CFB1255F22A046CE004FF716 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFB1256022A046CE004FF716 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CFB1256422A046D0004FF716 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFB1256522A046D0004FF716 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CFB1256822A046D0004FF716 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CFB1256922A046D0004FF716 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CFB1256B22A046D0004FF716 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M27K6H3ZAP;
+				INFOPLIST_FILE = HackaProf/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eddiesaboia.HackaProf;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CFB1256C22A046D0004FF716 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M27K6H3ZAP;
+				INFOPLIST_FILE = HackaProf/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eddiesaboia.HackaProf;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFB1255322A046CD004FF716 /* Build configuration list for PBXProject "HackaProf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFB1256822A046D0004FF716 /* Debug */,
+				CFB1256922A046D0004FF716 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFB1256A22A046D0004FF716 /* Build configuration list for PBXNativeTarget "HackaProf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFB1256B22A046D0004FF716 /* Debug */,
+				CFB1256C22A046D0004FF716 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFB1255022A046CD004FF716 /* Project object */;
+}
