@@ -11,7 +11,7 @@ class ProfessorDAO {
     
     static func getList() ->[Professor] {
         return [
-            Professor(aulas: AulaDAO.getList(), usuario: Usuario(nome: "Oswaldo", email: "oswaldo@gmail.com", senha: "12345678"), imagem: "matematica")
+            Professor(aulas: AulaDAO.getList(), usuario: Usuario(nome: "Oswaldo", email: "oswaldo@gmail.com", senha: "12345678"), imagem: "Icon-App-40x40")
         ]
     }
 }

@@ -42,7 +42,6 @@ class ESDisciplinaTableViewController: UITableViewController {
         return cell
     }
  
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -87,5 +86,5 @@ class ESDisciplinaTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

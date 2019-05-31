@@ -11,9 +11,7 @@ import UIKit
 class ESAulaViewController: UIViewController {
     
     @IBOutlet weak var imgAulaView: UIImageView!
-    
     @IBOutlet weak var txtAulaView: UITextView!
-    
     @IBOutlet weak var txtAulaHorario: UILabel!
     
     var imgprofessor:String!
@@ -27,14 +25,10 @@ class ESAulaViewController: UIViewController {
         txtAulaView.text = textoAula
         txtAulaHorario.text = txtHorario
         
-        // Do any additional setup after loading the view.
-        
     }
-    
     
     @IBAction func contratar(_ sender: Any) {
+        
     }
-    
-
 
 }
