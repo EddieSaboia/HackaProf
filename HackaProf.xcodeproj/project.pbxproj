@@ -25,6 +25,9 @@
 		CFB1258322A05ECF004FF716 /* AulaDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1258222A05ECF004FF716 /* AulaDAO.swift */; };
 		CFB1258522A066F4004FF716 /* ESDisciplinaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1258422A066F4004FF716 /* ESDisciplinaTableViewCell.swift */; };
 		CFB1258722A06B18004FF716 /* ESAulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1258622A06B18004FF716 /* ESAulaViewController.swift */; };
+		CFB1258922A19863004FF716 /* ESPerfilUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1258822A19863004FF716 /* ESPerfilUsuarioViewController.swift */; };
+		CFB1258C22A19D15004FF716 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB1258B22A19D15004FF716 /* AuthenticationServices.framework */; };
+		CFB1258E22A19D1E004FF716 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB1258D22A19D1E004FF716 /* LocalAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		CFB1258222A05ECF004FF716 /* AulaDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AulaDAO.swift; sourceTree = "<group>"; };
 		CFB1258422A066F4004FF716 /* ESDisciplinaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESDisciplinaTableViewCell.swift; sourceTree = "<group>"; };
 		CFB1258622A06B18004FF716 /* ESAulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESAulaViewController.swift; sourceTree = "<group>"; };
+		CFB1258822A19863004FF716 /* ESPerfilUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESPerfilUsuarioViewController.swift; sourceTree = "<group>"; };
+		CFB1258B22A19D15004FF716 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		CFB1258D22A19D1E004FF716 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB1258E22A19D1E004FF716 /* LocalAuthentication.framework in Frameworks */,
+				CFB1258C22A19D15004FF716 /* AuthenticationServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +74,7 @@
 			children = (
 				CFB1255A22A046CE004FF716 /* HackaProf */,
 				CFB1255922A046CE004FF716 /* Products */,
+				CFB1258A22A19D14004FF716 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +101,7 @@
 				CFB1256F22A04C2B004FF716 /* ESProfessorTableViewController.swift */,
 				CFB1257122A04C57004FF716 /* ESProfessorTableViewCell.swift */,
 				CFB1258622A06B18004FF716 /* ESAulaViewController.swift */,
+				CFB1258822A19863004FF716 /* ESPerfilUsuarioViewController.swift */,
 			);
 			path = HackaProf;
 			sourceTree = "<group>";
@@ -109,6 +119,15 @@
 				CFB1258222A05ECF004FF716 /* AulaDAO.swift */,
 			);
 			path = Objects;
+			sourceTree = "<group>";
+		};
+		CFB1258A22A19D14004FF716 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFB1258D22A19D1E004FF716 /* LocalAuthentication.framework */,
+				CFB1258B22A19D15004FF716 /* AuthenticationServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +208,7 @@
 				CFB1255E22A046CE004FF716 /* ViewController.swift in Sources */,
 				CFB1257222A04C57004FF716 /* ESProfessorTableViewCell.swift in Sources */,
 				CFB1257022A04C2B004FF716 /* ESProfessorTableViewController.swift in Sources */,
+				CFB1258922A19863004FF716 /* ESPerfilUsuarioViewController.swift in Sources */,
 				CFB1257922A04CB2004FF716 /* Professor.swift in Sources */,
 				CFB1255C22A046CE004FF716 /* AppDelegate.swift in Sources */,
 				CFB1258522A066F4004FF716 /* ESDisciplinaTableViewCell.swift in Sources */,

@@ -67,8 +67,7 @@ class ProfessorDAO {
     static func getList(x:Professor) -> Professor{
         
         return x
-    }
-    
-    
+
 }
 
+}

@@ -92,7 +92,6 @@ class ESProfessorTableViewController: UITableViewController {
         return true
     }
     */
-
     
     // MARK: - Navigation
 
@@ -105,6 +104,7 @@ class ESProfessorTableViewController: UITableViewController {
                 aulaview.imgprofessor = professores[indexx].imagem
 //                aulaview.textoAula = professores[indexx].aulas[indexx].descricao
 //                aulaview.txtHorario = professores[indexx].aulas[indexx].horario
+
             }
             
         }
