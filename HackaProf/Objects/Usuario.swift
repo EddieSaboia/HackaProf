@@ -18,6 +18,12 @@ class Usuario {
         self.email = json["email"] ?? ""
         self.senha = json["senha"] ?? ""
     }
+    
+    init(nome:String, email:String, senha:String) {
+        self.email = email
+        self.nome = nome
+        self.senha = senha
+    }
 
     
 }

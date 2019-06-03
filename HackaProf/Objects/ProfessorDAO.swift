@@ -28,9 +28,6 @@ class ProfessorDAO {
                 return
             }
             
-            let responseString = String(data: data!, encoding: String.Encoding.utf8)
-            print("responseString = \(String(describing: responseString))")
-            
             DispatchQueue.main.async() {
                 do {
                     if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [[String: AnyObject]] {
@@ -39,14 +36,9 @@ class ProfessorDAO {
                         
                             for jsonAula in json {
                                 let novaAula = Professor(json: jsonAula)
-                                print("eu init")
                                 estacionamento.append(novaAula)
                             }
-    
                         
-                        //let nomeEstacinamento = estacionamento.usuario[0].nome
-                        
-                       // print("\(nomeEstacinamento) tem \(estacionamento.aula.count) carros.")
                         callback(estacionamento)
                         
                     }else {
@@ -63,11 +55,5 @@ class ProfessorDAO {
         
         task.resume()
     }
-    
-    static func getList(x:Professor) -> Professor{
-        
-        return x
-
-}
 
 }

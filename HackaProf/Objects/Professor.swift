@@ -15,13 +15,11 @@ class Professor {
     
     init(json: [String: AnyObject]) {
         self.imagem = json["imagem"] as? String ?? ""
-    
         self.usuario = [Usuario]()
        
         if let usuarios = json["usuario"] as? [ [String: String] ] {
             for jsonUsuario in usuarios {
                 let novoUsuario = Usuario(json: jsonUsuario)
-                print("eu init")
                 self.usuario.append(novoUsuario)
             }
         }
@@ -31,10 +29,15 @@ class Professor {
         if let aulas = json["aulas"] as? [ [String: String] ] {
             for jsonAula in aulas {
                 let novaAula = Aula(json: jsonAula)
-                print("eu init")
                 self.aula.append(novaAula)
             }
         }
+    }
+    
+    init(usuario:[Usuario], imagem:String, aula:[Aula]){
+        self.aula = aula
+        self.imagem = imagem
+        self.usuario = usuario
     }
 
 }

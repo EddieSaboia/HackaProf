@@ -10,12 +10,13 @@ import UIKit
 
 class ESDisciplinaTableViewController: UITableViewController {
 
-    var disciplinassssssssss:[Disciplina]!
+    var disciplinas:[Disciplina]!
+    var indexx:Int = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        disciplinassssssssss = DisciplinaDAO.getList()
+        disciplinas = DisciplinaDAO.getList()
 
     }
 
@@ -28,7 +29,7 @@ class ESDisciplinaTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return disciplinassssssssss.count
+        return disciplinas.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -36,11 +37,16 @@ class ESDisciplinaTableViewController: UITableViewController {
 
         // Configure the cell...
         cell.imgDisciplina.image = UIImage(named: "matematica")
-        cell.txtDisciplina.text = disciplinassssssssss[indexPath.row].nome
-//        cell.textLabel?.text = disciplinassssssssss[indexPath.row].nome
-//        cell.backgroundView.
+        cell.txtDisciplina.text = disciplinas[indexPath.row].nome
+
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        self.indexx = indexPath.row
+        return indexPath
+    }
+    
  
     /*
     // Override to support conditional editing of the table view.
@@ -77,14 +83,23 @@ class ESDisciplinaTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "segueprofessores" {
+            
+            if let professorview = segue.destination as? ESProfessorTableViewController {
+                professorview.tipoAula = disciplinas[indexx].nome
+            }
+            
+        }
+        
+        
     }
-    */
+    
     
 }

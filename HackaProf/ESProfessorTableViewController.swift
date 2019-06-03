@@ -11,18 +11,42 @@ import UIKit
 class ESProfessorTableViewController: UITableViewController {
     
     var professores:[Professor] = []
+    var novoProfessores:[Professor] = []
+    var aulas:[Aula] = [Aula]()
     var indexx:Int = -1
+    var indexProfessor = false
+    
+    
+    var tipoAula:String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         ProfessorDAO.getEstacionamentos { (Professor) in
             self.professores = Professor
+            self.filtroAula(filtro: self.tipoAula!)
+            print("\(self.novoProfessores.count)")
             self.tableView.reloadData()
         }
-        
-
     }
+    
+    func filtroAula(filtro:String){
+        for teste in professores{
+            for aula in teste.aula{
+                if filtro == aula.tipo {
+                    let novaAula = Aula(horario: aula.horario, preco: aula.preco, descricao: aula.descricao, tipo: aula.tipo)
+                    aulas.append(novaAula)
+                    indexProfessor = true
+                }
+            }
+            if(indexProfessor){
+            novoProfessores.append(Professor(usuario: [Usuario(nome: teste.usuario[0].nome, email: teste.usuario[0].email, senha: teste.usuario[0].senha)], imagem: teste.imagem, aula: aulas))
+            indexProfessor = false
+            }
+            
+        }
+    }
+    
 
     // MARK: - Table view data source
 
@@ -33,16 +57,15 @@ class ESProfessorTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return professores.count
+        return novoProfessores.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:ESProfessorTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cellProfessor", for: indexPath) as! ESProfessorTableViewCell
         
         if (professores.count > 0){
-            cell.imgUiimage.image = UIImage(named: professores[indexPath.row].imagem)
-            cell.txtNomeProfessor.text = professores[indexPath.row].usuario[0].nome
+            cell.imgUiimage.image = UIImage(named: novoProfessores[indexPath.row].imagem)
+            cell.txtNomeProfessor.text = novoProfessores[indexPath.row].usuario[0].nome
         }else{
             cell.imgUiimage.image = UIImage(named: "")
             cell.txtNomeProfessor.text = ""
@@ -56,44 +79,7 @@ class ESProfessorTableViewController: UITableViewController {
         indexx = indexPath.row
         return indexPath
     }
- 
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
     
-    // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -101,9 +87,9 @@ class ESProfessorTableViewController: UITableViewController {
         if segue.identifier == "aulasegue" {
             
             if let aulaview = segue.destination as? ESAulaViewController {
-                aulaview.imgprofessor = professores[indexx].imagem
-//                aulaview.textoAula = professores[indexx].aulas[indexx].descricao
-//                aulaview.txtHorario = professores[indexx].aulas[indexx].horario
+                aulaview.imgprofessor = novoProfessores[indexx].imagem
+                aulaview.textoAula = novoProfessores[indexx].aula[0].descricao
+                aulaview.txtHorario = novoProfessores[indexx].aula[0].horario
 
             }
             
@@ -111,5 +97,4 @@ class ESProfessorTableViewController: UITableViewController {
         
     }
  
-
 }

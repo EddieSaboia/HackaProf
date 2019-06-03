@@ -10,9 +10,11 @@ import Foundation
 
 class Disciplina: NSObject {
     var nome:String
+    var imagem:String
    
-    init(nome:String) {
+    init(nome:String, imagem:String) {
         self.nome = nome
+        self.imagem = imagem
     }
     
 }

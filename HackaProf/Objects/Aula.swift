@@ -20,5 +20,12 @@ class Aula: NSObject {
         self.descricao = json["descricao"] ?? ""
         self.tipo = json["tipo"] ?? ""
     }
+    
+    init(horario:String, preco:String, descricao:String, tipo:String){
+        self.horario = horario
+        self.descricao = descricao
+        self.preco = preco
+        self.tipo = tipo
+    }
 
 }
