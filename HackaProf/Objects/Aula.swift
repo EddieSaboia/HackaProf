@@ -14,11 +14,11 @@ class Aula: NSObject {
     var descricao:String
     var tipo:String
     
-    init(horario:String, descricao:String, preco:String, tipo:String) {
-        self.horario = horario
-        self.preco = preco
-        self.descricao = descricao
-        self.tipo = tipo
+    init(json: [String: String]) {
+        self.horario = json["horario"] ?? ""
+        self.preco = json["preco"] ?? ""
+        self.descricao = json["descricao"] ?? ""
+        self.tipo = json["tipo"] ?? ""
     }
 
 }

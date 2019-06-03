@@ -10,13 +10,17 @@ import UIKit
 
 class ESProfessorTableViewController: UITableViewController {
     
-    var professores:[Professor]!
+    var professores:[Professor] = []
     var indexx:Int = -1
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        professores = ProfessorDAO.getList()
+        ProfessorDAO.getEstacionamentos { (Professor) in
+            self.professores = Professor
+            self.tableView.reloadData()
+        }
+        
 
     }
 
@@ -36,10 +40,14 @@ class ESProfessorTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:ESProfessorTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cellProfessor", for: indexPath) as! ESProfessorTableViewCell
         
+        if (professores.count > 0){
+            cell.imgUiimage.image = UIImage(named: professores[indexPath.row].imagem)
+            cell.txtNomeProfessor.text = professores[indexPath.row].usuario[0].nome
+        }else{
+            cell.imgUiimage.image = UIImage(named: "")
+            cell.txtNomeProfessor.text = ""
+        }
         
-//        cell.textLabel?.text = professores[indexPath.row].usuario.nome
-        cell.imgUiimage.image = UIImage(named: professores[indexPath.row].imagem)
-        cell.txtNomeProfessor.text = professores[indexPath.row].usuario.nome
         
         return cell
     }
@@ -95,9 +103,8 @@ class ESProfessorTableViewController: UITableViewController {
             
             if let aulaview = segue.destination as? ESAulaViewController {
                 aulaview.imgprofessor = professores[indexx].imagem
-                aulaview.textoAula = professores[indexx].aulas[indexx].descricao
-                aulaview.txtHorario = professores[indexx].aulas[indexx].horario
-                print(aulaview.imgprofessor)
+//                aulaview.textoAula = professores[indexx].aulas[indexx].descricao
+//                aulaview.txtHorario = professores[indexx].aulas[indexx].horario
             }
             
         }

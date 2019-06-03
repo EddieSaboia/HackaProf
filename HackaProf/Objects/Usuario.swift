@@ -8,14 +8,16 @@
 
 import Foundation
 
-class Usuario: NSObject {
+class Usuario {
     var nome:String
     var email:String
     var senha:String
 
-    init(nome:String, email:String, senha:String) {
-        self.nome = nome
-        self.email = email
-        self.senha = senha
+    init(json: [String: String]) {
+        self.nome = json["nome"] ?? ""
+        self.email = json["email"] ?? ""
+        self.senha = json["senha"] ?? ""
     }
+
+    
 }

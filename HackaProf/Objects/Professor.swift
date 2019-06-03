@@ -8,15 +8,33 @@
 
 import Foundation
 
-class Professor:NSObject {
-    var usuario:Usuario
-    var aulas:[Aula]
+class Professor {
+    var usuario: [Usuario]
     var imagem:String
+    var aula: [Aula]
     
-    init(aulas:[Aula], usuario:Usuario, imagem:String) {
-        self.aulas = aulas
-        self.usuario = usuario
-        self.imagem = imagem
+    init(json: [String: AnyObject]) {
+        self.imagem = json["imagem"] as? String ?? ""
+    
+        self.usuario = [Usuario]()
+       
+        if let usuarios = json["usuario"] as? [ [String: String] ] {
+            for jsonUsuario in usuarios {
+                let novoUsuario = Usuario(json: jsonUsuario)
+                print("eu init")
+                self.usuario.append(novoUsuario)
+            }
+        }
+
+        self.aula = [Aula]()
+        
+        if let aulas = json["aulas"] as? [ [String: String] ] {
+            for jsonAula in aulas {
+                let novaAula = Aula(json: jsonAula)
+                print("eu init")
+                self.aula.append(novaAula)
+            }
+        }
     }
 
 }

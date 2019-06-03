@@ -13,7 +13,11 @@ class DisciplinaDAO {
     
     static func getList() ->[Disciplina] {
         return [
-            Disciplina(nome: "Matematica")
+            Disciplina(nome: "Matematica"),
+            Disciplina(nome: "Ingles"),
+            Disciplina(nome: "Fisica"),
+            Disciplina(nome: "Quimica"),
+            Disciplina(nome: "Portugues")
         ]
     }
     

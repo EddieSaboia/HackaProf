@@ -11,7 +11,6 @@ import Foundation
 class UsuarioDAO {
     static func getList() ->[Usuario] {
         return [
-            Usuario(nome: "Oswaldo", email: "oswaldo@gmail.com", senha: "12345678")
         ]
     }
 }
