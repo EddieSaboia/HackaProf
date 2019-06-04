@@ -11,10 +11,13 @@ import Foundation
 class Professor {
     var usuario: [Usuario]
     var imagem:String
+    var perfil:String
     var aula: [Aula]
     
     init(json: [String: AnyObject]) {
         self.imagem = json["imagem"] as? String ?? ""
+        self.perfil = json["perfil"] as? String ?? ""
+        
         self.usuario = [Usuario]()
        
         if let usuarios = json["usuario"] as? [ [String: String] ] {
@@ -34,10 +37,10 @@ class Professor {
         }
     }
     
-    init(usuario:[Usuario], imagem:String, aula:[Aula]){
+    init(usuario:[Usuario], imagem:String, aula:[Aula], perfil:String){
         self.aula = aula
         self.imagem = imagem
         self.usuario = usuario
+        self.perfil = perfil
     }
-
 }

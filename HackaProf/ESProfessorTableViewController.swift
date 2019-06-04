@@ -15,18 +15,27 @@ class ESProfessorTableViewController: UITableViewController {
     var aulas:[Aula] = [Aula]()
     var indexx:Int = -1
     var indexProfessor = false
-    
-    
     var tipoAula:String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let alert = UIAlertController(title: nil, message: "Carregando...", preferredStyle: .alert)
+        
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.style = UIActivityIndicatorView.Style.gray
+        loadingIndicator.alpha = 0.7
+        loadingIndicator.startAnimating();
+
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
+        
         ProfessorDAO.getEstacionamentos { (Professor) in
             self.professores = Professor
             self.filtroAula(filtro: self.tipoAula!)
-            print("\(self.novoProfessores.count)")
             self.tableView.reloadData()
+            alert.dismiss(animated: true, completion: nil)
         }
     }
     
@@ -41,15 +50,12 @@ class ESProfessorTableViewController: UITableViewController {
             }
             if(indexProfessor){
             novoProfessores.append(Professor(usuario: [Usuario(nome: teste.usuario[0].nome, email: teste.usuario[0].email, senha: teste.usuario[0].senha)], imagem: teste.imagem, aula: aulas))
+            aulas = []
             indexProfessor = false
             }
-            
         }
     }
     
-
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -66,13 +72,15 @@ class ESProfessorTableViewController: UITableViewController {
         if (professores.count > 0){
             cell.imgUiimage.image = UIImage(named: novoProfessores[indexPath.row].imagem)
             cell.txtNomeProfessor.text = novoProfessores[indexPath.row].usuario[0].nome
+            cell.txtPrecoProfessor.text = "R$ \(novoProfessores[indexPath.row].aula[0].preco) - \(novoProfessores[indexPath.row].aula[0].horario) "
         }else{
             cell.imgUiimage.image = UIImage(named: "")
             cell.txtNomeProfessor.text = ""
+            cell.txtPrecoProfessor.text = ""
         }
-        
-        
+    
         return cell
+   
     }
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
@@ -87,9 +95,11 @@ class ESProfessorTableViewController: UITableViewController {
         if segue.identifier == "aulasegue" {
             
             if let aulaview = segue.destination as? ESAulaViewController {
+
                 aulaview.imgprofessor = novoProfessores[indexx].imagem
                 aulaview.textoAula = novoProfessores[indexx].aula[0].descricao
                 aulaview.txtHorario = novoProfessores[indexx].aula[0].horario
+                aulaview.txtPreco = novoProfessores[indexx].aula[0].preco
 
             }
             

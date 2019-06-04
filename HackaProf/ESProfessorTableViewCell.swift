@@ -13,4 +13,7 @@ class ESProfessorTableViewCell: UITableViewCell {
     
     @IBOutlet weak var txtNomeProfessor: UILabel!
     
+    @IBOutlet weak var txtPrecoProfessor: UILabel!
+    
+    
 }
