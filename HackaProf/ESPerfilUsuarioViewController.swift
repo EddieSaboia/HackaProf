@@ -19,12 +19,6 @@ class ESPerfilUsuarioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //btnEntrerere.backgroundColor = .clear
-        btnEntrerere.layer.cornerRadius = 5
-        btnEntrerere.layer.borderWidth = 1
-//        btnEntrerere.layer.backgroundColor =
-        btnEntrerere.layer.borderColor = UIColor.black.cgColor
-
         // Do any additional setup after loading the view.
     }
     

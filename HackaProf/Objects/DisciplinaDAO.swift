@@ -8,16 +8,15 @@
 
 import Foundation
 
-
 class DisciplinaDAO {
     
     static func getList() ->[Disciplina] {
         return [
-            Disciplina(nome: "matematica",imagem: "matematica"),
-            Disciplina(nome: "geografia",imagem: "ingles"),
-            Disciplina(nome: "fisica",imagem: "fisica"),
-            Disciplina(nome: "quimica",imagem: "quimica"),
-            Disciplina(nome: "Portugues",imagem: "portugues")
+            Disciplina(nome: "matematica",imagem: "Math"),
+            Disciplina(nome: "historia",imagem: "History"),
+            Disciplina(nome: "fisica",imagem: "Physics"),
+            Disciplina(nome: "quimica",imagem: "Chemestry"),
+            Disciplina(nome: "biologia",imagem: "Biology")
         ]
     }
     

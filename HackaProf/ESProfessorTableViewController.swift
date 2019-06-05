@@ -20,8 +20,8 @@ class ESProfessorTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "Lista de Professores"
         let alert = UIAlertController(title: nil, message: "Carregando...", preferredStyle: .alert)
-        
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true
         loadingIndicator.style = UIActivityIndicatorView.Style.gray
@@ -37,6 +37,10 @@ class ESProfessorTableViewController: UITableViewController {
             self.tableView.reloadData()
             alert.dismiss(animated: true, completion: nil)
         }
+        
+        if novoProfessores.count > 0 {
+            alert.dismiss(animated: true, completion: nil)
+        }
     }
     
     func filtroAula(filtro:String){
@@ -49,7 +53,7 @@ class ESProfessorTableViewController: UITableViewController {
                 }
             }
             if(indexProfessor){
-            novoProfessores.append(Professor(usuario: [Usuario(nome: teste.usuario[0].nome, email: teste.usuario[0].email, senha: teste.usuario[0].senha)], imagem: teste.imagem, aula: aulas))
+            novoProfessores.append(Professor(usuario: [Usuario(nome: teste.usuario[0].nome, email: teste.usuario[0].email, senha: teste.usuario[0].senha)], imagem: teste.imagem, aula: aulas,perfil: teste.perfil))
             aulas = []
             indexProfessor = false
             }
@@ -70,9 +74,9 @@ class ESProfessorTableViewController: UITableViewController {
         let cell:ESProfessorTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cellProfessor", for: indexPath) as! ESProfessorTableViewCell
         
         if (professores.count > 0){
-            cell.imgUiimage.image = UIImage(named: novoProfessores[indexPath.row].imagem)
+            cell.imgUiimage.image = UIImage(named: novoProfessores[indexPath.row].perfil)
             cell.txtNomeProfessor.text = novoProfessores[indexPath.row].usuario[0].nome
-            cell.txtPrecoProfessor.text = "R$ \(novoProfessores[indexPath.row].aula[0].preco) - \(novoProfessores[indexPath.row].aula[0].horario) "
+            cell.txtPrecoProfessor.text = "R$ \(novoProfessores[indexPath.row].aula[0].preco)/h - \(novoProfessores[indexPath.row].aula[0].horario) "
         }else{
             cell.imgUiimage.image = UIImage(named: "")
             cell.txtNomeProfessor.text = ""

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FE5454122A830600004C975 /* ESLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE5454022A830600004C975 /* ESLoginViewController.swift */; };
+		0FE5454322A855800004C975 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FE5454222A855800004C975 /* Logo.png */; };
 		CFB1255C22A046CE004FF716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1255B22A046CE004FF716 /* AppDelegate.swift */; };
 		CFB1255E22A046CE004FF716 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB1255D22A046CE004FF716 /* ViewController.swift */; };
 		CFB1256122A046CE004FF716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB1255F22A046CE004FF716 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FE5454022A830600004C975 /* ESLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESLoginViewController.swift; sourceTree = "<group>"; };
+		0FE5454222A855800004C975 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = ../../../../../Downloads/ios/Logo.png; sourceTree = "<group>"; };
 		CFB1255822A046CE004FF716 /* HackaProf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackaProf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB1255B22A046CE004FF716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFB1255D22A046CE004FF716 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,12 +100,14 @@
 				CFB1256222A046D0004FF716 /* Assets.xcassets */,
 				CFB1256422A046D0004FF716 /* LaunchScreen.storyboard */,
 				CFB1256722A046D0004FF716 /* Info.plist */,
+				0FE5454222A855800004C975 /* Logo.png */,
 				CFB1256D22A04B31004FF716 /* ESDisciplinaTableViewController.swift */,
 				CFB1258422A066F4004FF716 /* ESDisciplinaTableViewCell.swift */,
 				CFB1256F22A04C2B004FF716 /* ESProfessorTableViewController.swift */,
 				CFB1257122A04C57004FF716 /* ESProfessorTableViewCell.swift */,
 				CFB1258622A06B18004FF716 /* ESAulaViewController.swift */,
 				CFB1258822A19863004FF716 /* ESPerfilUsuarioViewController.swift */,
+				0FE5454022A830600004C975 /* ESLoginViewController.swift */,
 			);
 			path = HackaProf;
 			sourceTree = "<group>";
@@ -188,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FE5454322A855800004C975 /* Logo.png in Resources */,
 				CFB1256622A046D0004FF716 /* LaunchScreen.storyboard in Resources */,
 				CFB1256322A046D0004FF716 /* Assets.xcassets in Resources */,
 				CFB1256122A046CE004FF716 /* Main.storyboard in Resources */,
@@ -207,6 +214,7 @@
 				CFB1257F22A04D42004FF716 /* UsuarioDAO.swift in Sources */,
 				CFB1255E22A046CE004FF716 /* ViewController.swift in Sources */,
 				CFB1257222A04C57004FF716 /* ESProfessorTableViewCell.swift in Sources */,
+				0FE5454122A830600004C975 /* ESLoginViewController.swift in Sources */,
 				CFB1257022A04C2B004FF716 /* ESProfessorTableViewController.swift in Sources */,
 				CFB1258922A19863004FF716 /* ESPerfilUsuarioViewController.swift in Sources */,
 				CFB1257922A04CB2004FF716 /* Professor.swift in Sources */,
@@ -361,7 +369,7 @@
 		CFB1256B22A046D0004FF716 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M27K6H3ZAP;
@@ -374,14 +382,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		CFB1256C22A046D0004FF716 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M27K6H3ZAP;
@@ -394,7 +402,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
